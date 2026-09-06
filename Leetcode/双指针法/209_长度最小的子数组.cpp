@@ -1,7 +1,7 @@
 //初见滑动窗口
 
 #include <algorithm>
-    
+#include <vector>
 using namespace std;
 
 class Solution {
