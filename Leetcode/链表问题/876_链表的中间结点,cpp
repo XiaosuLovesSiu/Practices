@@ -1,0 +1,30 @@
+//也可采取快慢指针的方法。
+
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode() : val(0), next(nullptr) {}
+    ListNode(int x) : val(x), next(nullptr) {}
+    ListNode(int x, ListNode *next) : val(x), next(next) {}
+};
+
+class Solution {
+public:
+    ListNode* middleNode(ListNode* head) {
+        ListNode* searcher=head;
+        ListNode* flagger=head;
+        int nodeNum=0;
+
+        while(searcher!=nullptr)
+        {
+            nodeNum++;
+            searcher=searcher->next;
+        }
+        nodeNum/=2;
+        for(int i=0;i<nodeNum;i++)
+        {
+            flagger=flagger->next;
+        }
+        return flagger;
+    }
+};
