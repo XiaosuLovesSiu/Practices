@@ -1,4 +1,4 @@
-//滚动数组的用处。
+//动态规划的用处。
 
 #include <vector>
 using namespace std;
@@ -17,5 +17,25 @@ public:
             i++;
         }
         return fibbo[n];
+    }
+};
+
+//此外，改用滚动pair可以节约空间。下面是一个结果对1000000007取模的解法。
+
+class Solution2 {
+private:
+    const int mod=1000000007;
+public:
+    int fib(int n) {
+        if(n<2) return n;
+        else if(n<5) return n-1;
+        pair<int,int> fibo={0,1};
+        for(int i=1;i<n;i++)
+        {
+            int temp=(fibo.first+fibo.second)%mod;
+            fibo.first=fibo.second;
+            fibo.second=temp;
+        }
+        return fibo.second;
     }
 };
