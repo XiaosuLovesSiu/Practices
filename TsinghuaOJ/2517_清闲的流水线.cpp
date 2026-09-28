@@ -12,9 +12,9 @@ int main()
         if(a%2==1)
         {
             res+=(a-a%3);
-            cout << a%3;
+            cout << a%3 << ' ';
         }
-        else cout << a;
+        else cout << a << ' ';
     }
     cout << endl;
     cout << res;
