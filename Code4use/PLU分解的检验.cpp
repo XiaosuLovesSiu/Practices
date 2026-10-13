@@ -26,25 +26,38 @@ vector<vector<double>> matmul_ikj(
 
 int main() {
     // Example usage of the matmul_ikj function
+    vector<vector<double>> P = {
+        {0, 0, 0, 1},
+        {0, 0, 1, 0},
+        {1, 0, 0, 0},
+        {0, 1, 0, 0}
+    };
+
     vector<vector<double>> A = {
-        {1, 2, 3},
-        {4, 5, 6}
+        {0, 0, 1, 2},
+        {0, 0, 3, 0},
+        {1, -1, 0, 1},
+        {2, 0, -1, 3}
     };
 
-    vector<vector<double>> B = {
-        {7, 8},
-        {9, 10},
-        {11, 12}
+    vector<vector<double>> L = {
+        {1, 0, 0, 0},
+        {0.5, 1, 0, 0},
+        {0, 0, 1, 0},
+        {0, 0, 3, 1}
     };
 
-    vector<vector<double>> C = matmul_ikj(A, B);
+    vector<vector<double>> U = {
+        {2, 0, -1, 3},
+        {0, -1, 0.5, -0.5},
+        {0, 0, 1, 2},
+        {0, 0, 0, -6}
+    };
 
-    // Output the result
-    for (const auto& row : C) {
-        for (const auto& val : row) {
-            cout << val << " ";
-        }
-        cout << endl;
+    if(matmul_ikj(P, A) == matmul_ikj(L, U)) {
+        cout << "P*A = L*U" << endl;
+    } else {
+        cout << "P*A != L*U" << endl;
     }
 
     return 0;
