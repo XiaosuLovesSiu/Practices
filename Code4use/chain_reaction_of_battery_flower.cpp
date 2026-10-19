@@ -153,6 +153,7 @@ int main()
     {
         cout << '(' << Pair.first << ',' << Pair.second << ')' << ' ';
     }
+    cout << endl;
     cout << "is it possible to have an error? : " << error << endl;
     cout << "notice: we didn't search for paths in need of extra batteries.";
     return 0;
