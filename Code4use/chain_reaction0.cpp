@@ -109,7 +109,7 @@ bool searchForNStepsDone(vector<vector<int>> matrix, int steps, bool& error, vec
         for (int j = 0; j < matrix[0].size(); j++)
         {
             if(matrix[i][j]==-1) continue;
-            //上面这一句代表不再搜索添补牡丹的解法
+            //上面这一句代表不再搜索添补电池的解法
             auto matrixed = attemptToPoint_full(matrix,i,j,error);
             if(searchForNStepsDone(matrixed, steps-1, error, locations))
             {
