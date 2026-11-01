@@ -55,6 +55,8 @@ int main()
     {
         if(num>maxi) maxi=num;
         cout << num;
+        if(num<10) cout << "  ";
+        else if(num<100) cout << " ";
         count++;
         if(count%sz==0) cout << endl;
     }
