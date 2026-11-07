@@ -52,5 +52,8 @@ int main()
         }
         cout << endl;
     }
+    cin.ignore(); // Clear the newline character from the input buffer
+    cout << "press Enter to exit the program." << endl;
+    cin.get(); // Wait for the user to press Enter
     return 0;
 }
