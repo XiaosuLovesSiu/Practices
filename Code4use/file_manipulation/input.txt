@@ -1,13 +1,12 @@
-5 7
-inbox add sub copyto copyfrom outbox jump
-10
-add 2
-jump 1
-jump 1.7
-add     4    
-add 1.5
-add \frac{1}{3}
-copyto -2.33333
-inbox miracle
-inbox
-miracle
+Xiaosu 100
+Fuyi 96
+Jianjia 92
+RedStinger 99
+Tiao 88
+Deepseek 70
+Rainbow 65
+Volcano 2
+
+
+
+
